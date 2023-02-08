@@ -1,0 +1,55 @@
+Object.entries()
+Returns an array containing all of the [key, value] pairs of a given object's own enumerable string properties.
+
+Object.freeze()
+Freezes an object. Other code cannot delete or change its properties.
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+Object.fromEntries()
+Returns a new object from an iterable of [key, value] pairs. (This is the reverse of Object.entries).Parameters
+iterable
+An iterable, such as an Array or Map, containing a list of objects. Each object should have two properties:
+
+0
+A string or symbol representing the property key.
+
+1
+The property value.
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+Object.getOwnPropertyDescriptor()
+Returns a property descriptor for a named value on an object.
+
+Object.getOwnPropertyDescriptors()
+Returns an object containing all own property descriptors for an object.
+
+Object.getOwnPropertyNames()
+Returns an array containing the names of all of the given object's own enumerable and non-enumerable properties.
+
+Object.getOwnPropertySymbols()
+Returns an array of all symbol properties found directly upon a given object.
+
+Object.getPrototypeOf()
+Returns the prototype (internal [[Prototype]] property) of the specified object.
+
+Object.is()
+Compares if two values are the same value. Equates all NaN values (which differs from both IsLooselyEqual used by == and IsStrictlyEqual used by ===).
+Object.is() is not equivalent to the == operator. The == operator applies various coercions to both sides (if they are not the same type) before testing for equality (resulting in such behavior as "" == false being true), but Object.is() doesn't coerce either value.
+
+Object.is() is also not equivalent to the === operator. The only difference between Object.is() and === is in their treatment of signed zeros and NaN values. The === operator (and the == operator) treats the number values -0 and +0 as equal, but treats NaN as not equal to each other.
+
+
+
+Object.isExtensible()
+Determines if extending of an object is allowed.
+
+Object.isFrozen()
+Determines if an object was frozen.
+
+Object.isSealed()
+Determines if an object is sealed.
+
+Object.keys()
+Returns an array containing the names of all of the given object's own enumerable string properties.
+
+
+Object.values()
+Returns an array containing the values that correspond to all of a given object's own enumerable string properties.

@@ -1,0 +1,44 @@
+The includes() 
+method determines whether an array includes a certain value among its entries, returning true or false as appropriate.
+
+The join() 
+method creates and returns a new string by concatenating all of the elements in an array
+
+he some()
+ method tests whether at least one element in the array passes the test implemented by the provided function
+
+
+ he sort()
+  method sorts the elements of an array in place and returns the reference to the same array, now sorted.
+   The default sort order is ascending, built upon converting the elements into strings, then comparing their sequences of UTF-16 code units values.
+
+
+   entries()
+Return value A new Array iterator objec>>>the use iterator to retrieve elements
+
+
+
+he Array.from() 
+static method creates a new, shallow-copied Array instance from an iterable or array-like object.
+ex >>>>console.log(Array.from('foo'));
+// Expected output: Array ["f", "o", "o"]
+
+
+
+The fill()
+ method changes all elements in an array to a static value, from a start index (default 0) to an end index (default array.length). It returns the modified array.
+
+
+ The flat() 
+ method creates a new array with all sub-array elements concatenated into it recursively up to the specified depth.
+
+
+ The at()
+  method takes an integer value and returns the item at that index,
+   allowing for positive and negative integers. Negative integers count back from the last item in the array
+
+
+
+
+
+

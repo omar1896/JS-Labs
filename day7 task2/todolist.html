@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To do list</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style>
+        html,
+        body {
+            height: 100vh;
+            background-color: rgb(240, 233, 172);
+
+        }
+
+
+        #please-scroll {
+            height: calc(100vh - 110px);
+            overflow-y: scroll;
+        }
+    </style>
+</head>
+
+<body class="vh-100">
+    <div class="container d-flex justify-content-center align-items-center w-50 h-100">
+
+        <div class="row col-sm-12 col-md-12  bg-info justify-content-center align-items-center " style=" border: 2px solid rgb(157, 250, 211);
+        border-radius: 45px;">
+
+            <!--///////////////// task box /////////////-->
+            
+                <div class="row  col-12  align-middle pt-3 justify-content-center align-items-center ">
+
+                    <h3  class="col-12" style="text-align: center; border: 2px solid rgb(157, 250, 211);
+                    border-radius: 25px;; color: rgb(13, 77, 77); background-color: rgb(243, 163, 243); ">Your ToDo List</h3>
+                    
+                    <div class="container"
+                        style="height:400px ; width: 600px; background-color: rgb(246, 231, 248); overflow-y:auto; border:  2px solid rgb(157, 250, 211);
+                        border-radius: 5px;">
+                       
+                        <div class="row" id="add" style="font-size: larger; font-style: italic; overflow-wrap: break-word;" >
+                             <h2 class=" row col-12" id="old" style="text-align:start;"> No Tasks Yet</h2> 
+                            </div>
+
+
+                       
+                    </div>
+
+
+                </div>
+            
+            <!--///////////////// end task box ////////////////-->
+
+            <!--/////////////////fixed btn & text row //////-->
+            <div class="row  col-sm-12 pt-3  ">
+
+                <div class="input-group mb-3 col-md-10 col-sm-12  ">
+                    <span class="input-group-text" id="inputGroup-sizing-default">New-Task</span>
+                    <input type="text" id="input" class="form-control" aria-label="Sizing example input"
+                        aria-describedby="inputGroup-sizing-default">
+                </div>
+                <button type="button" id="btn" class="btn btn-success col-md-2 col-sm-12 mb-3">Add</button>
+            </div>
+            <!--/////////////////fixed btn & text row //////-->
+        </div>
+
+
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script src="todolist.js"></script>
+</body>
+
+</html>
