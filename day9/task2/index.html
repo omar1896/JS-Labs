@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>clock</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style>
+    .clock {
+        position: absolute;
+       
+        color: #0a0a0a;
+        font-size: 60px;
+        font-family:monospace;
+        letter-spacing: 7px;
+       
+    }
+</style>
+</head>
+<body style="background-color: #0a0a0a;">
+   <div class="container justify-content-center align-items-center bg-secondary" style="border-radius: 30px;">
+
+
+<div class="cotainer pt-3 col-12 ">
+    <p style="text-align: center; font-size:30px">DIGITAL-CLOCK</p>
+    <div class="row justify-content-center align-items-center bg-info pt-5" style="height: 200px;">
+        
+
+        <div id="MyClockDisplay" class="clock " onload="showTime()"></div>
+
+
+</div>
+</div>
+<div class="container" style="height: 200px;">
+    <div class="row justify-content-center align-items-center">
+        <h1 class="col-12" style="text-align: center; background-color:rgb(156, 197, 197);border-radius: 30px;"> Set-timer</h1>
+        <div class="row justify-content-center align-items-center">
+            <div class="row col-12 justify-content-center align-items-center">
+            <h4 >Hours</h4>
+            <h4 class="px-2">: Minutes :</h4>
+            <h4>Seconds</h4>
+        </div>
+            <div class=" input-group col-4" >
+
+             
+                <input type="text " aria-label="First name" class="form-control" placeholder="24" id="hour" style="border-radius: 40px;">
+                <input type="text " aria-label="Last name" class="form-control" placeholder="min" id="mm" style="border-radius: 40px;">
+                <input type="text " aria-label="Last name" class="form-control" placeholder="60" id="seconds"style="border-radius: 40px;">
+                
+              </div>  
+              
+        </div>
+        <div class="cotainer col-12 row justify-content-center align-items-center pt-2">
+        <button type="button" class="btn btn-info col-md-1  mx-2" style="border-radius: 5px; " id="set">SET</button>
+        <button type="button" class="btn btn-info col-md-1 mx-2 " style="border-radius: 5px; " id="reset">RESET</button>
+    </div>
+    </div>
+</div>
+
+</div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+        <script src="clock.js"></script>
+</body>
+</html>
