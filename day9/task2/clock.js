@@ -26,10 +26,29 @@ function showTime(){
     
 }
 
+function changew(){
+     document.body.style.backgroundColor = "white";
+   
+
+}
+function changeb(){
+   
+   document.body.style.backgroundColor = "black";
+
+}
+var w;
+var b;
 function alerttt(){
    var sound = new Audio("https://freesound.org/data/previews/316/316847_4939433-lq.mp3");
     sound.play();
     console.log("ok")
+    //document.body.style.backgroundColor = "white";
+    //document.body.style.backgroundColor = "black";
+   // console.log( document.body.style.backgroundColor = "white")
+    w= setInterval( changew,100)
+     b=setInterval(changeb,500)
+
+     document.getElementById("set").disabled=true;
    
 document.getElementById("hour").value=""
 
@@ -82,9 +101,27 @@ document.getElementById("hour").value=""
 document.getElementById("mm").value=""
 
 document.getElementById("seconds").value=""
+clearInterval(w)
+document.body.style.backgroundColor = "black";
+document.getElementById("set").disabled=false;
     }
 
 
 
 
 reset.onclick=clearmytime;
+
+var d=document.getElementById("date")
+
+  var dd=new Date()
+  var str;
+
+function getd()
+{str= dd.toDateString()}
+str= dd.toDateString()
+
+d.innerHTML=str
+setTimeout(getd,43200000)
+
+
+
