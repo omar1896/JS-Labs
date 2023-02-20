@@ -19,25 +19,29 @@ var btn = document.getElementById("but")
 btn.addEventListener("click", function (event) {
 
     event.preventDefault();
-    var flag;
+    if(document.getElementById("pass").value!=""&&document.getElementById("email").value!=""){
+    var flag1;
+    var flag2
     var email = document.getElementById("email").value
     if (regexofemail.test(email) == true) {
         document.getElementById("email").style.borderColor = "green"
         document.getElementById("emailvalid").style.color="green"
         emailvalid.innerText = "valid"
+        flag1=2
     } else {
         emailvalid.innerText = "notvalid-email must contain @/.com /no spaces"
         document.getElementById("email").style.borderColor = "red";
+        document.getElementById("emailvalid").style.color="red"
     }
 
     var password = document.getElementById("pass").value
-    if (regexofpassdigit.test(password)) {
+    if (regexofpassdigit.test(password)&&document.getElementById("email").value!="") {
         if (passofcapital.test(password)) {
             if (passofsmal.test(password)) {
                 document.getElementById("pass").style.borderColor = "green"
                 document.getElementById("passvalid").style.color="green"
                 passvalid.innerText = "valid"
-                flag = 2
+                flag2= 2;
             } else {
                 document.getElementById("passvalid").style.color = "brown"
                 passvalid.innerText = "password should contain atleast 3 lower cases"
@@ -61,12 +65,21 @@ btn.addEventListener("click", function (event) {
         document.getElementById("pass").style.borderColor = "red";
     }
 
-    if (flag == 2) { 
+    if (flag1 == 2&&flag2==2) { 
         
-        setTimeout( validate ,2000)}
+        setTimeout( validate ,1000)}
 
-})
+} else{
+    emailvalid.innerText = "notvalid-email must contain @/.com /no spaces"
+    document.getElementById("email").style.borderColor = "red";
+    document.getElementById("emailvalid").style.color="red"
+    document.getElementById("passvalid").style.color = "brown"
+    passvalid.innerText = "password should contain a mix of atleast 2 uppercases/atleast 3 lowercases/a numbers"
+    console.log(email)
+    password = document.getElementById("pass").value = ""
+    document.getElementById("pass").style.borderColor = "red";
+}} )
 
 function validate(){
-    alert(`your email  \n password saved`)
+    alert(`your email & password saved`)
 }
