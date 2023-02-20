@@ -1,22 +1,16 @@
 
+var bod=document.getElementById("container")
 
-//var task= document.getElementById("input").value
-//var newDiv = document.createElement("div");
-//newDiv.appendChild(task);
+var add=document.getElementById("add");
 
-//var add=document.getElementById("add");
-//document.body.insertBefore(newDiv, add);
 
-var btn = document.getElementById("btn");
 
 btn.addEventListener("click", function () {
+  
 
   var c = document.getElementById("input").value
   if (c.length < 1) { return } else {
     var old = document.getElementById("old");
-
-
-
 
 
     var xx = new Date();
@@ -47,13 +41,13 @@ btn.addEventListener("click", function () {
     btny.innerHTML = "&#10004;";
     btny.setAttribute("class", "col-md-1 col-sm-12 btn btn-outline-success");
     btny.setAttribute("style", "font-size:100%");
+
     btny.onclick = function () {
 
-      newDiv.setAttribute("style", " text-decoration: line-through; background-color:  rgb(157, 250, 211); overflow-y: auto;");
+    newDiv.setAttribute("style", " text-decoration: line-through; background-color:  rgb(157, 250, 211); overflow-y: auto;");
 
-
-
-
+    console.log("test")
+  
 
     };
     add.appendChild(btny)
@@ -63,7 +57,7 @@ btn.addEventListener("click", function () {
     btnx.setAttribute("class", "col-md-1 col-sm-12 btn btn-outline-danger");
 
     btnx.onclick = function () {
-
+console.log()
       newDiv.parentNode.removeChild(newDiv);
       btnx.parentNode.removeChild(btnx)
       btny.parentNode.removeChild(btny)
@@ -75,12 +69,85 @@ btn.addEventListener("click", function () {
     add.appendChild(d)
 
 
+ 
 
     document.getElementById("input").value = "";
     old.parentNode.removeChild(old);
+    
   }
+  
+ 
+      
+  
 })
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// let stored=add.innerHTML
+// console.log(stored);
+   
+//   localStorage.setItem("innerofadd",stored)
+
+
+// function store(){
+//   let stored=bod.innerHTML
+//   console.log(stored);
+
+//   localStorage.setItem("innerofadd",stored)
+// }
+
+
+
+
+// function restoref(){
+
+//   let restore = localStorage.getItem("innerofadd")
+  
+//   console.log(restore)
+//   add.innerHTML= restore
+// }
+
+
+/**d1.insertAdjacentHTML('afterend', '<div id="two">two</div>'); */
+
+
+/**var xmlString = "<div id='foo'><a href='#'>Link</a><span></span></div>";
+var doc = new DOMParser().parseFromString(xmlString, "text/xml");
+console.log(doc.firstChild.innerHTML); // => <a href="#">Link...
+console.log(doc.firstChild.firstChild.innerHTML); // => Link */
+
+
+// window.addEventListener("onunload",store)
+ //window.addEventListener("onload",restoref)
+ //window.onunload=store()
+//window.onload=restoref()
 
 

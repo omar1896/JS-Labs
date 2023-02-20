@@ -1,4 +1,5 @@
-document.body.style.backgroundImage = "url('https://images.unsplash.com/photo-1517732306149-e8f829eb588a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8Mnx8fGVufDB8fHx8&w=1000&q=80')";
+
+
 document.body.style.backgroundRepeat = "no-repeat";
 document.body.style.backgroundSize = "100%";
 var btn=document.getElementById("but")

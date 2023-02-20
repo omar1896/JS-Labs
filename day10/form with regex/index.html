@@ -9,18 +9,18 @@
 </head>
 <body style="background-color: rgb(38, 196, 143);">
    <div class="container">
-    <div class="row offset-4 pt-3 mt-3  rounded  col-4" style="background-color: rgb(110, 110, 192); height: 350px;">
+    <div class="row offset-4 pt-4 mt-4  rounded  col-4" style="background-color: rgb(219, 219, 233); height: 350px;">
         <h3 class="col-12">Please Login</h3>
         
-    <form class="form-floating needs-validation offset-1 mb-3" validate>
+    <form class="form-floating needs-validation offset-1 mb-3 col-10" validate>
         <div class="form-floating mb-3">
-          <input type="text"  class="form-control"  placeholder="User-Name" id="username" required>
-          <label for="floatingInput">invalid</label>
+          <input type="text"  class="form-control "  placeholder="email" id="email" required>
+          <label for="floatingInput" id="emailvalid" ></label>
         </div>
 
         <div class="form-floating">
-            <input type="password" class="form-control"  placeholder="Password" id="pass" required>
-            <label for="floatingPassword">Password</label>
+            <input type="password" class="form-control"  placeholder="Password" id="pass" required minlength="8" >
+            <label for="floatingPassword" id="passvalid" ></label>
           </div>
        
         <button class="btn btn-primary" id="but" >Login</button>
